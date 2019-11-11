@@ -4,7 +4,7 @@
     <div id=""> {{msg}}</div>
 
 </template>
-
+<!--这是一段没有用的话-->
 
 <script>
 
