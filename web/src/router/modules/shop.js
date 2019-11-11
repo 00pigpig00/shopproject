@@ -11,7 +11,7 @@ const shopRouter = {
       path: '/home',
       component: () => import('@/views/shop/HomePage/Home'),
       name: 'home',
-      meta: { title: '商城首页', icon: 'dashboard', affix: true }
+      meta: { title: '商城首页', icon: 'documentation', affix: true }
     },
     {
       path: '/order',
