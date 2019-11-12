@@ -3,7 +3,7 @@
       {{msg}}
     </div>
 </template>
-
+<!--这是一段没有用的话-->
 
 <script>
 
@@ -21,5 +21,8 @@
 
 </script>
 
+<style>
+  @import "home.css";
+</style>
 
 
