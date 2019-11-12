@@ -60,6 +60,12 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/loginIn',
+    component: () => import('@/views/shop/LoginPage/LoginIn'),
+    name: 'loginIn',
+    meta: { title: '登录/注册', icon: 'dashboard', affix: true }
+  },
+  {
     path: '/auth-redirect',
     component: () => import('@/views/login/auth-redirect'),
     hidden: true
