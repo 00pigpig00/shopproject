@@ -1,0 +1,112 @@
+#homepage{
+  height: 100%;
+}
+.el-container{
+  height: 100%;
+  width: 100%;
+}
+/*头部轮播图*/
+.header_index {
+  height: 200px !important;
+  /*background-color: #B3C0D1;*/
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+  /*border: 2px solid blue;*/
+}
+/*列表主展示区*/
+.main_index {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+  /*line-height: 160px;*/
+  /*border: 2px solid red;*/
+}
+/*产品列表框*/
+.product_list{
+  width: 1300px;
+  height: auto;
+  margin: 0 auto;
+  /*border: 2px solid #001528;*/
+}
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+
+/*轮播图片的样式*/
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
+
+
+
+/*具体的产品列表，卡片*/
+.time {
+  font-size: 13px;
+  color: #999;
+}
+
+.bottom {
+  margin-top: 13px;
+  line-height: 12px;
+}
+
+.button {
+  padding: 0;
+  float: right;
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both
+}
+.ka{
+  width: 300px;
+  height: 400px;
+}
+.el-col-offset-2{
+  margin-left: 7.7%;
+}
+.biaoti{
+  font-weight: 900;
+  font-size: 22px;
+  color: black;
+}
+.neicun{
+  color: #5a5e66;
+  font-size: 15px;
+  font-weight: 700;
+}
+.jiage{
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+}
