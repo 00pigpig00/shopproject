@@ -21,5 +21,8 @@
 
 </script>
 
+<style>
+  @import "home.css";
+</style>
 
 
