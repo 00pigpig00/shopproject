@@ -32,11 +32,6 @@ import {fetchList} from '@/api/shop'
             this.list=res.data.items;
             this.init();
 //            this.total=res.data.items.length;
-
-            //数据分页
-//            this.getList();
-
-
           })
         },
       methods: {
