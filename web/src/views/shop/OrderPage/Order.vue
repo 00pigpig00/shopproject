@@ -1,29 +1,31 @@
 <template>
-
-       
-    <div id=""> {{msg}}</div>
+  <div id="order">
+    <el-tabs :tab-position="tabPosition" style="height: 200px;">
+      <el-tab-pane label="个人中心">
+        <myorder></myorder>
+      </el-tab-pane>
+      <el-tab-pane label="我的订单">
+        <mycenter></mycenter>
+      </el-tab-pane>
+    </el-tabs>
+  </div>
 
 </template>
-<!--这是一段没有用的话-->
 
 <script>
-
-    export default {
-        name: 'Order',
-        data() {
-
-            return {msg: '订单页面'}
-
-        },
-        mounted() {
-        }
-
+  import myorder from './myorder.vue';
+  import mycenter from './mycenter.vue';
+export default {
+    name:'order',
+    components:{myorder,mycenter},
+    data(){
+      return{
+        tabPosition:"left"
+      }
     }
-
+}
 </script>
 
-
-<style>
-
-
+<style scoped>
+    @import './order.css';
 </style>
