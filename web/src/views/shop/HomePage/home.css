@@ -8,14 +8,37 @@
   width: 100%;
 }
 /*头部轮播图*/
+.header_index .image{
+  height: 350px;
+}
 .header_index {
-  height: 220px !important;
+  height: 380px !important;
+  padding: 0;
+  margin: 0;
   /*background-color: #B3C0D1;*/
   color: #333;
   text-align: center;
   line-height: 60px;
   /*border: 2px solid blue;*/
 }
+
+/*轮播图片的样式*/
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
+
+
 /*列表主展示区*/
 .main_index {
   margin: 0;
@@ -28,6 +51,7 @@
   /*border: 2px solid red;*/
 }
 
+
 /*侧边栏样式*/
 .aside_index {
   background-color: white;
@@ -36,6 +60,9 @@
   /*color: #333;*/
   /*text-align: center;*/
   line-height: 100px;
+}
+.el-button+.el-button{
+  margin-left: 0px !important;
 }
 
 
@@ -114,6 +141,7 @@
 .ka{
   width: 300px;
   height: 400px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
 }
 .el-col-offset-2{
   margin-left: 7.7%;
