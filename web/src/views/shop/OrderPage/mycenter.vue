@@ -8,17 +8,17 @@
           </template>
           <div class="myinfo">
             <div class="avtar">
-              <img src="shop_img/shop.png" alt="">
+              <img :src="userinfos.userimg" alt="">
               <span>个人头像</span>
             </div>
             <div class="infos">
               <p>
                 <label for="">用户名</label>
-                <span>Saturn</span>
+                <span>{{userinfos.username}}</span>
               </p>
               <p>
                 <label for="">手机号</label>
-                <span>13743413123</span>
+                <span>{{userinfos.userphone}}</span>
               </p>
               <p>
                 <label for="">我的收藏</label>
@@ -34,11 +34,11 @@
           <div class="addr-list-wrap">
             <div class="addr-list">
               <ul>
-                <li>
+                <li v-for="(address,key) in myaddress" :key="key">
                   <dl>
-                    <dt>林佳虹</dt>
-                    <dd class="address">北京市朝阳区朝阳公园</dd>
-                    <dd class="tel">12345678901</dd>
+                    <dt>{{address.userName}}</dt>
+                    <dd class="address">{{address.streetName}}</dd>
+                    <dd class="tel">{{address.tel}}</dd>
                   </dl>
                   <div class="addr-opration addr-edit">
                     <i class="el-icon-edit-outline"></i>
@@ -48,7 +48,7 @@
                       <i class="el-icon-delete"></i>
                     </a>
                   </div>
-                  <div class="addr-opration addr-default">默认地址</div>
+                  <div class="addr-opration addr-default" v-if="address.isDefault">默认地址</div>
                 </li>
                 <li class="addr-new">
                   <div class="add-new-inner">
@@ -59,7 +59,6 @@
                 </li>
               </ul>
             </div>
-
             <div class="shipping-addr-more">
               <a class="addr-more-btn up-down-btn" href="javascript:;">
                 more
@@ -75,16 +74,37 @@
     </div>
 </template>
 <script>
+  import {fetchUserAddress,queryUser} from '@/api/shop';
     export default {
         name: '',
         data() {
             return {
-              msg: 'vue模板页',
-              activeNames: ['1']
+              myaddress:[],//用户常用地址
+              activeNames: ['1'],
+              userinfos:[],//用户个人信息
             }
-
         },
         mounted() {
+          this.getmyAddress();//获取用户常用地址
+          this.getmyinfo();//获取用户个人信息
+        },
+        methods:{
+          //获取用户常用地址
+          getmyAddress(){
+            fetchUserAddress().then(res=>{
+              console.log('地址',res)
+              if(res.code==20000){
+                this.myaddress = res.data.items;
+              }
+            })
+          },
+          //获取用户个人信息
+          getmyinfo(){
+            queryUser({"userid":"lixiaoshuang"}).then(result=>{
+              console.log('结果',result)
+              this.userinfos = result.data.items[0];
+            })
+          },
         }
 
     }

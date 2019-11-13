@@ -93,3 +93,11 @@ p,ul,li{
 .el-card__body{
   display: flex;
 }
+.footer-page{
+  display: flex;
+  align-items: center;
+}
+.footer-page p{
+  font-size: 12px;
+  color: #333;
+}
