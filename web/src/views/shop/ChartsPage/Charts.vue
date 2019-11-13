@@ -12,29 +12,42 @@
 
 <script>
 import echarts from 'echarts';
+import axios from 'axios';
+import {fetchList} from '@/api/shop'
 
     export default {
         name: 'charts',
         data() {
 
-            return {msg: '图标'}
+            return {msg: '图标',
+              list:[]
+            }
 
         },
         mounted() {
-         this.init();
+
+
+          fetchList().then(res=>{
+            console.log(res.data);
+            this.list=res.data.items;
+            this.init();
+//            this.total=res.data.items.length;
+          })
         },
       methods: {
         init(){
+          let that =this
           this.chart = echarts.init(document.getElementById("charts"));
           this.chart.setOption({
             legend: {},
             tooltip: {},
             dataset: {
               source: [
-                ['product', '2016', '2017', '2018', '2019'],
-                ['手机卡', 41.1, 30.4, 65.1, 53.3],
-                ['宽带', 86.5, 92.1, 85.7, 83.1],
-                ['手机', 24.1, 67.2, 79.5, 86.4]
+                that.list[0],that.list[1],that.list[2],that.list[3]
+//                ['product', '2016', '2017', '2018', '2019'],
+//                ['手机卡', 41.1, 30.4, 65.1, 53.3],
+//                ['宽带', 86.5, 92.1, 85.7, 83.1],
+//                ['手机', 24.1, 67.2, 79.5, 86.4]
               ]
             },
             xAxis: [
