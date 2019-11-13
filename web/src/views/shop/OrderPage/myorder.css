@@ -34,3 +34,62 @@ p,ul,li{
 .pro-common-li p{
   font-size:12px;
 }
+.orderlist li:last-child{
+  display: block;
+}
+.order-infos-wrap{
+  display: flex;
+  margin-top: 20px;
+  width:100%;
+  flex-direction: column;
+}
+.order-infos-wrap img{
+  /*width: 300px;*/
+  /*height: 120px;*/
+  margin-right:20px;
+}
+.order-infos{
+  width:100%;
+  display: block;
+}
+.order-infos p{
+  width:50%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:12px;
+}
+.order-infos .span-left{
+  color: #333;
+  font-size: 13px;
+}
+.order-infos .span-right{
+  color: #333;
+  font-size: 12px;
+}
+.order-pro-info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+}
+.order-user-info{
+  margin-top: 20px;
+}
+.order-user-info p{
+  color: #333;
+  width: 53%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:15px;
+}
+.order-user-info p .span-left{
+  color: #333;
+  font-size: 13px;
+}
+.order-user-info p .span-right{
+  color: #333;
+  font-size: 12px;
+}
+.el-card__body{
+  display: flex;
+}
