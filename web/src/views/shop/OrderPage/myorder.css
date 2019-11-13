@@ -44,7 +44,7 @@ p,ul,li{
   flex-direction: column;
 }
 .order-infos-wrap img{
-  /*width: 300px;*/
+  width: 300px;
   /*height: 120px;*/
   margin-right:20px;
 }
@@ -53,7 +53,7 @@ p,ul,li{
   display: block;
 }
 .order-infos p{
-  width:50%;
+  width:100%;
   display: flex;
   justify-content: space-between;
   margin-bottom:12px;
