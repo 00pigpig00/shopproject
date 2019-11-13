@@ -1,6 +1,8 @@
 #homepage{
   height: 100%;
+  width: 100%;
 }
+.el-main{padding: 0 !important;}
 .el-container{
   height: 100%;
   width: 100%;
@@ -18,8 +20,8 @@
 .main_index {
   margin: 0;
   padding: 0;
-  height: 100% !important;
-  /*background-color: #E9EEF3;*/
+  height: auto !important;
+  background: #f5f5f5;
   color: #333;
   text-align: center;
   /*line-height: 160px;*/
@@ -39,9 +41,9 @@
 
 /*产品列表框*/
 .product_list{
-  width: 1300px;
+  width: 1360px;
   height: auto;
-  margin: 0 auto;
+  margin: 30px auto;
   /*border: 2px solid #001528;*/
 }
 .el-container:nth-child(5) .el-aside,
@@ -67,7 +69,13 @@
 .el-carousel__item:nth-child(2n+1) {
   background-color: #d3dce6;
 }
-
+.el-carousel{
+    overflow: hidden;
+    height: 320px !important;
+}
+.el-carousel__container{
+    height: 100%;
+}
 
 
 /*具体的产品列表，卡片*/
@@ -85,10 +93,13 @@
   padding: 0;
   float: left;
 }
-
+.medium{
+    height: 100%;
+}
 .image {
   width: 100%;
   display: block;
+  height: 100%;
 }
 
 .clearfix:before,
@@ -121,4 +132,10 @@
   color: red;
   font-size: 20px;
   font-weight: 600;
+}
+.el-row{
+    background: #fff;
+}
+.el-col-offset-2{
+    margin-top: 30px;
 }

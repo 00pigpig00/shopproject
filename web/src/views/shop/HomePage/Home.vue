@@ -1,16 +1,97 @@
 <template>
     <div id="homepage">
-      <el-container>
-
-        <el-header class="header_index">
-          <el-carousel :interval="3000" type="card" height="180px">
+        <!-- 轮播图 -->
+        <el-carousel :interval="3000" type="card" height="320px;background: #fff" :autoplay="false">
             <el-carousel-item v-for="(item,index) in lunbo" :key="index">
               <h3 class="medium"><img :src="item.img1" class="image"></h3>
             </el-carousel-item>
-          </el-carousel>
-        </el-header>
-
-        <el-container>
+        </el-carousel>
+        <!-- 商品列表 -->
+          <el-main class="main_index">
+            <!-- 宽带套餐 -->
+            <div class="product_list">
+                <div>
+                    <h2 class="title">宽带套餐</h2>
+                </div>
+                <el-row>
+                    <el-col class="ka" :span="8" v-for="(o, index) in kuandai" :key="index" :offset="2">
+                        <el-card :body-style="{ padding: '0px' }">
+                            <img :src="o.img2" class="image">
+                            <div style="padding: 14px;">
+                            <span class="biaoti">{{o.title}}</span>
+                            <div class="bottom clearfix">
+                                <el-popover
+                                placement="top-start"
+                                :title="o.title"
+                                width="285"
+                                height="150"
+                                trigger="hover"
+                                :content="o.content">
+                                <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                                </el-popover>
+                            </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+              </el-row>
+            </div>
+            <!-- 手机 -->
+            <div class="product_list">
+                <div>
+                    <h2 class="title">手机</h2>
+                </div>
+                <el-row>
+                    <el-col class="ka" :span="8" v-for="(o, index) in phoneimgs" :key="index" :offset="2">
+                        <el-card :body-style="{ padding: '0px' }">
+                            <img :src="o.img3" class="image">
+                            <div style="padding: 14px;">
+                            <span type="text" class="biaoti">{{o.title}}</span>
+                            <span type="text" class="neicun">{{o.neicun}}</span><br>
+                            <span type="text" class="jiage">{{o.jiage}}</span>
+                            <div class="bottom clearfix">
+                                <el-popover
+                                placement="top-start"
+                                :title="o.title"
+                                width="285"
+                                height="150"
+                                trigger="hover"
+                                :content="o.content">
+                                <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                                </el-popover>
+                            </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+              </el-row>
+            </div>
+            <!-- 特惠大惊喜 -->
+            <div class="product_list">
+                <div>
+                    <h2 class="title">特惠大惊喜</h2>
+                </div>
+                <el-row>
+                    <el-col class="ka" :span="8" v-for="(o, index) in shangwang" :key="index" :offset="2">
+                        <el-card :body-style="{ padding: '0px' }">
+                            <img :src="o.img4" class="image">
+                            <div style="padding: 14px;">
+                            <span class="biaoti">{{o.title}}</span>
+                            <div class="bottom clearfix">
+                                <el-popover
+                                placement="top-start"
+                                :title="o.title"
+                                width="285"
+                                height="150"
+                                trigger="hover"
+                                :content="o.content">
+                                <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                                </el-popover>
+                            </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </div>
+          </el-main>
           <el-aside width="130px" class="aside_index">
             <div>
                 <el-button type="text">宽带专区</el-button>
@@ -19,100 +100,9 @@
                 <el-button type="text" icon="el-icon-phone">客服</el-button>
             </div>
           </el-aside>
-
-
-
-          <el-main class="main_index">
-
-            <div class="product_list">
-              <div>
-                <h2 class="title">宽带套餐</h2>
-              </div>
-              <el-row>
-                <el-col class="ka" :span="8" v-for="(o, index) in kuandai" :key="index" :offset="2">
-                  <el-card :body-style="{ padding: '0px' }">
-                    <img :src="o.img2" class="image">
-                    <div style="padding: 14px;">
-                      <span class="biaoti">{{o.title}}</span>
-                      <div class="bottom clearfix">
-                        <el-popover
-                          placement="top-start"
-                          :title="o.title"
-                          width="285"
-                          height="150"
-                          trigger="hover"
-                          :content="o.content">
-                          <el-button type="text" class="button" slot="reference">商品详情</el-button>
-                        </el-popover>
-                      </div>
-                    </div>
-                  </el-card>
-                </el-col>
-              </el-row>
-            </div>
-
-
-            <div class="product_list">
-              <div>
-                <h2 class="title">手机</h2>
-              </div>
-              <el-row>
-                <el-col class="ka" :span="8" v-for="(o, index) in phoneimgs" :key="index" :offset="2">
-                  <el-card :body-style="{ padding: '0px' }">
-                    <img :src="o.img3" class="image">
-                    <div style="padding: 14px;">
-                      <span type="text" class="biaoti">{{o.title}}</span>
-                      <span type="text" class="neicun">{{o.neicun}}</span><br>
-                      <span type="text" class="jiage">{{o.jiage}}</span>
-                      <div class="bottom clearfix">
-                        <el-popover
-                          placement="top-start"
-                          :title="o.title"
-                          width="285"
-                          height="150"
-                          trigger="hover"
-                          :content="o.content">
-                        <el-button type="text" class="button" slot="reference">商品详情</el-button>
-                        </el-popover>
-                      </div>
-                    </div>
-                  </el-card>
-                </el-col>
-              </el-row>
-            </div>
-
-            <div class="product_list">
-              <div>
-                <h2 class="title">特惠大惊喜</h2>
-              </div>
-              <el-row>
-                <el-col class="ka" :span="8" v-for="(o, index) in shangwang" :key="index" :offset="2">
-                  <el-card :body-style="{ padding: '0px' }">
-                    <img :src="o.img4" class="image">
-                    <div style="padding: 14px;">
-                      <span class="biaoti">{{o.title}}</span>
-                      <div class="bottom clearfix">
-                        <el-popover
-                          placement="top-start"
-                          :title="o.title"
-                          width="285"
-                          height="150"
-                          trigger="hover"
-                          :content="o.content">
-                          <el-button type="text" class="button" slot="reference">商品详情</el-button>
-                        </el-popover>
-                      </div>
-                    </div>
-                  </el-card>
-                </el-col>
-              </el-row>
-            </div>
-
-          </el-main>
-
-        </el-container>
-      </el-container>
-    </div>
+         </div>
+           
+          
 </template>
 <!--这是一段没有用的话-->
 
