@@ -7,7 +7,7 @@
 }
 /*头部轮播图*/
 .header_index {
-  height: 200px !important;
+  height: 220px !important;
   /*background-color: #B3C0D1;*/
   color: #333;
   text-align: center;
@@ -19,12 +19,24 @@
   margin: 0;
   padding: 0;
   height: 100% !important;
-  background-color: #E9EEF3;
+  /*background-color: #E9EEF3;*/
   color: #333;
   text-align: center;
   /*line-height: 160px;*/
   /*border: 2px solid red;*/
 }
+
+/*侧边栏样式*/
+.aside_index {
+  background-color: white;
+  border: 2px solid #00ff00;
+  height:420px;
+  /*color: #333;*/
+  /*text-align: center;*/
+  line-height: 100px;
+}
+
+
 /*产品列表框*/
 .product_list{
   width: 1300px;
@@ -71,7 +83,7 @@
 
 .button {
   padding: 0;
-  float: right;
+  float: left;
 }
 
 .image {
