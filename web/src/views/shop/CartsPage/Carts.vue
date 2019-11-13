@@ -62,30 +62,34 @@
           width="55">
         </el-table-column>
         <el-table-column
+          property="goodsName"
           label="商品"
           width="350">
-          <template slot-scope="scope">{{ scope.row.date }}</template>
+
         </el-table-column>
         <el-table-column
-          prop="num"
+          property="price"
           label="单价"
           show-overflow-tooltip>
         </el-table-column>
         <el-table-column
-          prop="name"
+          property="number"
           label="数量"
           width="220">
-          <el-input-number v-model="num" :step="1" :min="1" :max="5" style="width: 100px"></el-input-number>
+          <template slot-scope="scope">
+            <el-button size="mini"  @click="handleSubtract(scope.$index, scope.row)">-</el-button>
+            {{scope.row.number}}
+            <el-button size="mini" type="danger" @click="handleAdd(scope.row)">+</el-button>
+          </template>
+          <!--<el-input-number v-model="num" :step="1" :min="1" :max="5" style="width: 100px"></el-input-number>-->
         </el-table-column>
-        <el-table-column
-          prop="num"
-          label="小计"
-          show-overflow-tooltip>
-        </el-table-column>
+
         <el-table-column
           label="操作"
           show-overflow-tooltip>
-          <el-button icon="el-icon-delete"></el-button>
+          <template slot-scope="scope">
+            <el-button size="mini" @click="remove(scope.$index)">移除</el-button>
+          </template>
         </el-table-column>
       </el-table>
       <div style="margin-top: 20px">
@@ -114,34 +118,49 @@
         data() {
 
             return {
+              totalMoney: 0,
               num: 1,
               activeIndex: '1',
               activeIndex2: '1',
               input: '',
-              tableData: [{
-                date: '2016-05-03',
-                name: '王小虎',
-                num: '1',
-                address: '上海市普陀区金沙江路 1518 弄'
-
-              }, {
-                date: '2016-05-02',
-                name: '王小虎',
-                num:'2',
-                address: '上海市普陀区金沙江路 1518 弄'
-              }, {
-                date: '2016-05-04',
-                name: '王小虎',
-                num:'3',
-                address: '上海市普陀区金沙江路 1518 弄'
-              }],
-              multipleSelection: []
+              tableData:  [
+                {
+                  goodsName: "iphone7",
+                  price: 5555,
+                  number: 1
+                },
+                {
+                  goodsName: "iphone7",
+                  price: 5555,
+                  number: 1
+                },
+                {
+                  goodsName: "iphone7",
+                  price: 5555,
+                  number: 1
+                },
+                {
+                  goodsName: "iphone7",
+                  price: 5555,
+                  number: 1
+                }
+              ],
+              currentRow: null
             };
-
         },
+      components: {},
         mounted() {
 
         },
+      computed: {
+        calculate: function() {
+          var sum = 0;
+          for (var i = 0; i < this.tableData.length; i++) {
+            sum += this.tableData[i].price * this.tableData[i].number;
+          }
+          return sum;
+        }
+      },
         methods: {
           handleSelect(key, keyPath) {
             console.log(key, keyPath);
@@ -157,10 +176,21 @@
           },
           handleSelectionChange(val) {
             this.multipleSelection = val;
-          }
-        },
+          },
 
+      handleSubtract(index, row,event) {
+        if(row.number>1){
+          row.number-=1;
+        }
+      },
+      handleAdd(row) {
+        row.number += 1;
+      },
+      remove(index) {
+        this.tableData.splice(index, 1);
+      }
     }
+};
 
 </script>
 

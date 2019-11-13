@@ -1,30 +1,73 @@
 <template>
     <div id="myorder">
-      <ul>
-        <li>
-          <div>
-            <img src="" alt="">
+      <!--我的订单-->
+      <ul class="orderlist">
+        <li class="pro-info">
+          <h5></h5>
+          <div class="shop-img">
+            <img src="shop_img/shop.png"/>
           </div>
-          <div>
-            <p>我的英雄</p>
-            <p>下单时间</p>
-            <p>热血</p>
+          <div class="shop-info">
+            <p>【会员专属】超级品牌日回购四大特权 [交易快照]</p>
           </div>
+        </li>
+        <li class="pro-money pro-common-li">
+          <p>￥0.01</p>
+        </li>
+        <li class="pro-common-li">
+          <p>1</p>
+        </li>
+        <li class="pro-common-li">
+          <p>已付款</p>
+        </li>
+      </ul>
+      <ul class="orderlist">
+        <li class="pro-info">
+          <h5></h5>
+          <div class="shop-img">
+            <img src="shop_img/shop.png"/>
+          </div>
+          <div class="shop-info">
+            <p>【会员专属】超级品牌日回购四大特权 [交易快照]</p>
+          </div>
+        </li>
+        <li class="pro-money pro-common-li">
+          <p>￥0.01</p>
+        </li>
+        <li class="pro-common-li">
+          <p>1</p>
+        </li>
+        <li class="pro-common-li">
+          <p>已付款</p>
+        </li>
+      </ul>
+      <ul class="orderlist">
+        <li class="pro-info">
+          <h5></h5>
+          <div class="shop-img">
+            <img src="shop_img/shop.png"/>
+          </div>
+          <div class="shop-info">
+            <p>【会员专属】超级品牌日回购四大特权 [交易快照]</p>
+          </div>
+        </li>
+        <li class="pro-money pro-common-li">
+          <p>￥0.01</p>
+        </li>
+        <li class="pro-common-li">
+          <p>1</p>
+        </li>
+        <li class="pro-common-li">
+          <p>待发货</p>
         </li>
       </ul>
     </div>
-
 </template>
-
-
 <script>
-
     export default {
         name: '',
         data() {
-
             return {msg: '我的订单'}
-
         },
         mounted() {
         }
@@ -34,7 +77,7 @@
 </script>
 
 
-<style>
-
+<style scoped>
+  @import "myorder.css";
 
 </style>

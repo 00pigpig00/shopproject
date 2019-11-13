@@ -1,0 +1,36 @@
+p,ul,li{
+  margin: 0;
+  padding:0;
+}
+.orderlist{
+  list-style: none;
+  padding-left: 10px;
+  display: flex;
+  width: 100%;
+  margin-bottom:20px;
+  border-bottom:1px solid #dcdcdc;
+  padding-bottom:15px;
+}
+.orderlist li{
+  display: flex;
+}
+.orderlist .pro-info{
+  width: 35%;
+}
+.orderlist li img{
+  width:80px;
+  height:80px;
+}
+.shop-info{
+  padding-left:15px;
+}
+.shop-info p{
+  margin-bottom:15px;
+  font-size:12px;
+}
+.pro-common-li{
+  width: 15%;
+}
+.pro-common-li p{
+  font-size:12px;
+}
