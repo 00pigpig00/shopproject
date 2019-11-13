@@ -6,50 +6,18 @@
   width: 100%;
 }
 /*头部轮播图*/
+.header_index .image{
+  height: 350px;
+}
 .header_index {
-  height: 220px !important;
+  height: 380px !important;
+  padding: 0;
+  margin: 0;
   /*background-color: #B3C0D1;*/
   color: #333;
   text-align: center;
   line-height: 60px;
   /*border: 2px solid blue;*/
-}
-/*列表主展示区*/
-.main_index {
-  margin: 0;
-  padding: 0;
-  height: 100% !important;
-  /*background-color: #E9EEF3;*/
-  color: #333;
-  text-align: center;
-  /*line-height: 160px;*/
-  /*border: 2px solid red;*/
-}
-
-/*侧边栏样式*/
-.aside_index {
-  background-color: white;
-  border: 2px solid #00ff00;
-  height:420px;
-  /*color: #333;*/
-  /*text-align: center;*/
-  line-height: 100px;
-}
-
-
-/*产品列表框*/
-.product_list{
-  width: 1300px;
-  height: auto;
-  margin: 0 auto;
-  /*border: 2px solid #001528;*/
-}
-.el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
 }
 
 /*轮播图片的样式*/
@@ -69,6 +37,47 @@
 }
 
 
+/*列表主展示区*/
+.main_index {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  /*background-color: #E9EEF3;*/
+  color: #333;
+  text-align: center;
+  /*line-height: 160px;*/
+  /*border: 2px solid red;*/
+}
+
+
+/*侧边栏样式*/
+.aside_index {
+  background-color: white;
+  border: 2px solid #00ff00;
+  height:420px;
+  /*color: #333;*/
+  /*text-align: center;*/
+  line-height: 100px;
+}
+.el-button+.el-button{
+  margin-left: 0px !important;
+}
+
+
+/*产品列表框*/
+.product_list{
+  width: 1300px;
+  height: auto;
+  margin: 0 auto;
+  /*border: 2px solid #001528;*/
+}
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
 
 /*具体的产品列表，卡片*/
 .time {
@@ -85,7 +94,11 @@
   padding: 0;
   float: left;
 }
-
+.gouwuche{
+  padding: 0;
+  float: right;
+  color: red;
+}
 .image {
   width: 100%;
   display: block;
@@ -103,6 +116,7 @@
 .ka{
   width: 300px;
   height: 400px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
 }
 .el-col-offset-2{
   margin-left: 7.7%;
@@ -122,3 +136,12 @@
   font-size: 20px;
   font-weight: 600;
 }
+.qq:hover{
+  border: 2px solid red;
+}
+
+
+
+
+
+

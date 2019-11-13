@@ -1,9 +1,9 @@
 <template>
     <div id="homepage">
-      <el-container>
+      <el-container class="homepage">
 
         <el-header class="header_index">
-          <el-carousel :interval="3000" type="card" height="180px">
+          <el-carousel :interval="3000" type="card" height="350px">
             <el-carousel-item v-for="(item,index) in lunbo" :key="index">
               <h3 class="medium"><img :src="item.img1" class="image"></h3>
             </el-carousel-item>
@@ -26,14 +26,15 @@
 
             <div class="product_list">
               <div>
-                <h2 class="title">宽带套餐</h2>
+                <h2 class="title">------宽带套餐------</h2>
               </div>
               <el-row>
                 <el-col class="ka" :span="8" v-for="(o, index) in kuandai" :key="index" :offset="2">
-                  <el-card :body-style="{ padding: '0px' }">
+                  <el-card class="qq" :body-style="{ padding: '0px' }">
                     <img :src="o.img2" class="image">
                     <div style="padding: 14px;">
-                      <span class="biaoti">{{o.title}}</span>
+                      <span class="biaoti">{{o.title}}</span><br>
+                      <span type="text" class="jiage">{{o.jiage}}</span><i class="el-icon-shopping-cart-2"></i>
                       <div class="bottom clearfix">
                         <el-popover
                           placement="top-start"
@@ -43,6 +44,7 @@
                           trigger="hover"
                           :content="o.content">
                           <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                          <el-button type="text" class="gouwuche" slot="reference" >+购物车</el-button>
                         </el-popover>
                       </div>
                     </div>
@@ -54,11 +56,11 @@
 
             <div class="product_list">
               <div>
-                <h2 class="title">手机</h2>
+                <h2 class="title">------手机------</h2>
               </div>
               <el-row>
                 <el-col class="ka" :span="8" v-for="(o, index) in phoneimgs" :key="index" :offset="2">
-                  <el-card :body-style="{ padding: '0px' }">
+                  <el-card class="qq" :body-style="{ padding: '0px' }">
                     <img :src="o.img3" class="image">
                     <div style="padding: 14px;">
                       <span type="text" class="biaoti">{{o.title}}</span>
@@ -73,6 +75,7 @@
                           trigger="hover"
                           :content="o.content">
                         <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                          <el-button type="text" class="gouwuche" slot="reference" >+购物车</el-button>
                         </el-popover>
                       </div>
                     </div>
@@ -83,14 +86,15 @@
 
             <div class="product_list">
               <div>
-                <h2 class="title">特惠大惊喜</h2>
+                <h2 class="title">------特惠大惊喜------</h2>
               </div>
               <el-row>
                 <el-col class="ka" :span="8" v-for="(o, index) in shangwang" :key="index" :offset="2">
-                  <el-card :body-style="{ padding: '0px' }">
+                  <el-card class="qq" :body-style="{ padding: '0px' }">
                     <img :src="o.img4" class="image">
                     <div style="padding: 14px;">
-                      <span class="biaoti">{{o.title}}</span>
+                      <span class="biaoti">{{o.title}}</span><br>
+                      <span type="text" class="jiage">{{o.jiage}}</span>
                       <div class="bottom clearfix">
                         <el-popover
                           placement="top-start"
@@ -100,6 +104,7 @@
                           trigger="hover"
                           :content="o.content">
                           <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                          <el-button type="text" class="gouwuche" slot="reference" >+购物车</el-button>
                         </el-popover>
                       </div>
                     </div>
@@ -142,17 +147,20 @@
                 {
                   img2:'shop_img/l50.png',
                   title:'超快 50M 🏎跑车速度',
-                  content:'50M宽带给你跑车般的速度体验'
+                  content:'50M宽带给你跑车般的速度体验',
+                  jiage:'包年￥210',
                 },
                 {
                   img2:'shop_img/l100.png',
                   title:'超快 100M 🚀火箭速度',
-                  content:'100M宽带给你火箭般的速度体验'
+                  content:'100M宽带给你火箭般的速度体验',
+                  jiage:'包年￥420',
                 },
                 {
                   img2:'shop_img/l1000.png',
                   title:'超快 1000M 🛸飞碟速度',
-                  content:'1000M宽带给你飞碟般的速度体验'
+                  content:'1000M宽带给你飞碟般的速度体验',
+                  jiage:'包年￥840',
                 },
               ],
               phoneimgs:[
@@ -180,19 +188,19 @@
               ],
               shangwang:[
                 {
-                  img4:'shop_img/shangwang2.jpg',
-                  title:'大流量套餐',
-                  content:'梦王卡专享中石加油卡，充值9.4折，多充多减！'
+                  img4:'shop_img/aiqingka2.png',
+                  title:'爱情卡为爱买单',
+                  jiage:'￥10',
                 },
                 {
-                  img4:'shop_img/shangwang4.png',
-                  title:'畅爽冰淇淋',
-                  content:'4G畅爽冰激凌国内流量不限量-129元/月、4G畅爽冰激凌国内流量不限量-199元/月、畅爽全国冰激凌套餐398元档。'
+                  img4:'shop_img/jixiangka3.png',
+                  title:'吉祥卡吉祥安康',
+                  jiage:'￥10',
                 },
                 {
-                  img4:'shop_img/shangwang5.jpg',
-                  title:'5G畅爽套餐',
-                  content:'畅爽冰激凌5G套餐129元、159元、199元产品提供5G优享服务，下行速率最高500Mbps，上行速率最高100Mbps；299元、399元、599元产品提供5G极速服务，下行速率最高1Gbps，上行速率最高100Mbps。'
+                  img4:'shop_img/xuebaka1.png',
+                  title:'学霸卡永不挂科',
+                  jiage:'￥10',
                 },
               ],
 
