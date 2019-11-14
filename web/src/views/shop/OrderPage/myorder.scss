@@ -99,7 +99,7 @@ p,ul,li{
         display: flex;
         align-items: center;
         position: fixed;
-        bottom: 0;
+        bottom: 60px;
     }
     .footer-page p{
         font-size: 12px;
@@ -108,5 +108,9 @@ p,ul,li{
     .el-tab-pane{
         height: 600px;
         overflow: auto;
+    }
+    .pagination-container{
+        padding: 0;
+        margin: 0;
     }
 }
