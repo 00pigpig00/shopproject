@@ -33,17 +33,17 @@
                 </template>
                 <div class="addr-list-wrap">
                     <div class="addr-list">
-                    <ul>
-                        <li v-for="(address,key) in myaddress" :key="key">
+                    <ul class="addr-ul">
+                        <li v-for="(address,key) in myaddress" :key="key" v-if="key<defaultShow">
                         <dl>
                             <dt>{{address.userName}}</dt>
-                            <dd class="address">{{address.streetName}}</dd>
+                            <dd class="address">{{address.province}}{{address.city}}{{address.county}}{{address.streetName}}</dd>
                             <dd class="tel">{{address.tel}}</dd>
                         </dl>
-                        <div class="addr-opration addr-edit">
+                        <div class="addr-opration addr-edit" @click="handleEdit(address )">
                             <i class="el-icon-edit-outline"></i>
                         </div>
-                        <div class="addr-opration addr-del">
+                        <div class="addr-opration addr-del" @click="handleDel(address,key)">
                             <a href="javascript:;" class="addr-del-btn">
                             <i class="el-icon-delete"></i>
                             </a>
@@ -60,7 +60,7 @@
                     </ul>
                     </div>
                     <div class="shipping-addr-more">
-                    <a class="addr-more-btn up-down-btn" href="javascript:;">
+                    <a class="addr-more-btn up-down-btn" href="javascript:;" @click="showMore">
                         more
                         <i class="i-up-down">
                         <i class="i-up-down-l"></i>
@@ -72,7 +72,7 @@
             </el-collapse-item>
         </el-collapse>
         <!-- 增加收货地址弹框 -->
-        <el-dialog title="增加收货地址" :visible.sync="showAddress">
+        <el-dialog :title="modalType" :visible.sync="showAddress">
             <el-form :model="form">
                 <el-form-item label="收件人名称" label-width="120px">
                     <el-input v-model="form.userName" autocomplete="off"></el-input>
@@ -81,7 +81,7 @@
                     <el-input v-model="form.tel" autocomplete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="收件人地址" label-width="120px">
-                    <v-distpicker :placeholders="placeholders" @selected="getarea"></v-distpicker>
+                    <v-distpicker :placeholders="placeholders" @selected="getarea" :province="form.province" :city="form.city" :area="form.county"></v-distpicker>
                     <el-input style="margin-top:15px;" placeholder="详细地址：如道路、门牌号、小区、楼栋号、单元室等" v-model="form.streetName" autocomplete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="设为默认地址" label-width="120px">
@@ -112,7 +112,8 @@
                 userinfos:[],//用户个人信息
                 showAddress:false,
                 areas:'',
-              
+                modalType:'增加收货地址',
+                defaultShow:3,
                 placeholders: {
                     province: '------- 省 --------',
                     city: '--- 市 ---',
@@ -122,8 +123,12 @@
                     userName: '',
                     isDefault:false,
                     tel: '',
-                    streetName:''
+                    streetName:'',
+                    province:'',
+                    city:'',
+                    dist:'',
                 },
+                tempForm:{}
             }
         },
         mounted() {
@@ -134,10 +139,10 @@
             //获取用户常用地址
             getmyAddress(){
                 fetchUserAddress().then(res=>{
-                    console.log('地址',res)
                     if(res.code==20000){
                         this.myaddress = res.data.items;
-                    }
+                    };
+                    console.log('地址',res)
                 })
             },
             //获取用户个人信息
@@ -148,19 +153,68 @@
                 })
             },
             addNewAddress(){
+                this.form.userName = null;
+                this.form.isDefault = null;
+                this.form.tel = null;
+                this.form.streetName = null;
+                this.form.city = null;
+                this.form.province = null;
+                this.form.dist = null;
                 this.showAddress = true;
+                this.modalType = '增加收货地址';
             },
             getarea(area){
                 console.log(area)
                 this.areas = `${area.province.value}${area.city.value}${area.area.value}`;
+                this.form.province =area.province.value;
+                this.form.city = area.city.value;
+                this.form.dist = area.area.value;
             },
             //  确认新增收货地址 
             confirm(){
-                this.form.streetName = `${this.areas} ${this.form.streetName}`;
-                console.log('确认按钮',this.form)
-                this.myaddress.push(this.form);
+                if(this.modalType == '增加收货地址' ){
+                    this.form.streetName = `${this.areas} ${this.form.streetName}`;
+                    this.myaddress.push(this.form);
+                }else{
+                    let index = this.myaddress.indexOf(this.tempForm);
+                    this.myaddress.splice(index,1,this.form);
+                }
                 this.showAddress = false;
             },
+            //修改操作
+            handleEdit(address){
+                this.tempForm = address;
+                this.modalType = '修改收件人地址';
+                this.showAddress = true;this.form = Object.assign({},this.tempForm);
+            },
+            // 删除操作
+            handleDel(address,index){
+                this.$confirm('您确认删除该地址么?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    this.myaddress.splice(index,1);
+
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
+            },
+            // 点击显示更多
+            showMore(){
+                if(this.defaultShow==3){
+                    this.defaultShow = this.myaddress.length;
+                }else{
+                    this.defaultShow=3;
+                }
+            }
         }
 
     }
