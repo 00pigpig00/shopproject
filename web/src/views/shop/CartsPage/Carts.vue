@@ -105,7 +105,7 @@
   <el-footer>
     <div class="fixde-bottom">
       <a href="#">
-        <el-buttom label="去结算" style="width:100px;height: 50px;background-color: red;float: right;line-height: 50px;text-align: center;color: #ffffff" >去结算</el-buttom>
+        <el-button label="去结算" style="width:100px;height: 50px;background-color: red;float: right;line-height: 50px;text-align: center;color: #ffffff" >去结算</el-button>
       </a>
       <div style="float: right;line-height: 50px;padding-right: 80px">总价：&nbsp;&nbsp;¥{{calculate}}</div>
     </div>

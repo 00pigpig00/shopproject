@@ -222,7 +222,6 @@
 </script>
 
 
-<style>
- @import "mycenter.css";
-
+<style lang="scss" scoped>
+ @import "mycenter.scss";
 </style>

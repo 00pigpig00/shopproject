@@ -43,7 +43,7 @@
                                 height="150"
                                 trigger="hover"
                                 :content="o.content">
-                                <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                                <el-button type="text" class="button" slot="reference" @click="godetails(o)">商品详情</el-button>
                                 </el-popover>
                             </div>
                             </div>
@@ -72,7 +72,7 @@
                                 height="150"
                                 trigger="hover"
                                 :content="o.content">
-                                <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                                <el-button type="text" class="button" slot="reference" @click="godetails(o)">商品详情</el-button>
                                 </el-popover>
                             </div>
                             </div>
@@ -100,7 +100,7 @@
                                 height="150"
                                 trigger="hover"
                                 :content="o.content">
-                                <el-button type="text" class="button" slot="reference">商品详情</el-button>
+                                <el-button type="text" class="button" slot="reference" @click="godetails(o)">商品详情</el-button>
                                 </el-popover>
                             </div>
                             </div>
@@ -206,19 +206,23 @@
         },
         mounted() {
         },
-      methods:{
-        handleChange(val){
-          console.log(val);
-        }
+        methods:{
+            handleChange(val){
+                console.log(val);
+            },
+            godetails(o){
+                this.$router.push('/prodetails');
+            }
+
+
       }
 
     }
 
 </script>
 
-<style scoped>
-  @import "home.css";
-
+<style lang="scss">
+  @import "home.scss";
 </style>
 
 
