@@ -9,7 +9,7 @@ const orderList = []// 订单列表模拟数据
 const userAddress = []// 用户的常用地址
 const userinfoList = []// 用户的个人信息
 // 订单列表
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 10; i++) {
   orderList.push(Mock.mock({
     id: '@id',
     userid: '@id',

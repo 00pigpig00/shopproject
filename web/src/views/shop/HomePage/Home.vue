@@ -216,9 +216,8 @@
 
 </script>
 
-<style scoped>
-  @import "home.css";
-
+<style lang="scss">
+  @import "home.scss";
 </style>
 
 
