@@ -2,33 +2,33 @@
   <div class="container">
     <div class="productInfo">
       <div class="productImg">
-        <div class="bigImg"><img src="../../../public/shop_img/icon (6).jpg"></div>
+        <div class="bigImg"><img src="shop_img/icon (6).jpg"></div>
         <div class="imgBox">
           <div class="miniImgBox">
             <ul class="miniImg">
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="../../../public/shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
             </ul>
           </div>
@@ -41,11 +41,11 @@
         <div class="prices"><span class="n-price">￥5999.00</span><span class="o-price">￥5999.99</span></div>
         <div class="starScore">
 							<span class="star">
-								<img src="../../../public/shop_img/bon-star.png">
-								<img src="../../../public/shop_img/bon-star.png">
-								<img src="../../../public/shop_img/bon-star.png">
-                <img src="../../../public/shop_img/bon-star.png">
-                <img src="../../../public/shop_img/boff-star.png">
+								<img src="shop_img/bon-star.png">
+								<img src="shop_img/bon-star.png">
+								<img src="shop_img/bon-star.png">
+                <img src="shop_img/bon-star.png">
+                <img src="shop_img/boff-star.png">
 							</span>4.5 <span style="color:#cccccc;margin:0 10px">|</span>
           <span class="reviewsCount">5 条评论</span>
         </div>
@@ -186,14 +186,14 @@
   .stoleft {
 
     left: 0;
-    background-image: url("../../../public/shop_img/dtoleft.png");
+    background-image: url("../../../../public/shop_img/dtoleft.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .storight {
     right: 0;
-    background-image: url("../../../public/shop_img/dtoright.png");
+    background-image: url("../../../../public/shop_img/dtoright.png");
     background-repeat: no-repeat;
     background-position: center;
 
