@@ -19,10 +19,14 @@
   import mycenter from './mycenter.vue';
 export default {
     name:'order',
-    components:{myorder,mycenter},
+    components:{
+      myorder,
+      mycenter
+    },
     data(){
       return{
-        tabPosition:"left"
+        tabPosition:"left",
+
       }
     }
 }
