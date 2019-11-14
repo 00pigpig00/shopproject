@@ -76,7 +76,7 @@
     </div>
 </template>
 <script>
-  import {fetchOrderList} from '@/api/shop';
+    import {fetchOrderList} from '@/api/shop';
     export default {
         name: '',
         data() {
@@ -92,35 +92,31 @@
           //获取用户订单列表
           this.getOrderList();
         },
-      methods:{
-          //获取订单列表
-          getOrderList(){
-            fetchOrderList().then(res=>{
-              if(res.code==20000){
-                this.orderList = res.data.items;
-                this.total = res.data.items.length;
-                this.allPageSize = this.pageCount(this.orderList.length,5);
-              }
-              console.log('res',res)
-            })
-          },
-          //点击弹框查看订单详情
-          checkDetails(items){
-            this.dialogTableVisible = true;
-            this.moreDetails = items;
-          },
-          // 根据数据条数与每页多少条数据计算页数
-          pageCount (totalnum,limit){
-            return totalnum > 0 ? ((totalnum < limit) ? 1 : ((totalnum % limit) ? (parseInt(totalnum / limit) + 1) : (totalnum / limit))) : 0;
-          }
-      }
-
+        methods:{
+            //获取订单列表
+            getOrderList(){
+                fetchOrderList().then(res=>{
+                if(res.code==20000){
+                    this.orderList = res.data.items;
+                    this.total = res.data.items.length;
+                    this.allPageSize = this.pageCount(this.orderList.length,5);
+                }
+                console.log('res',res)
+                })
+            },
+            //点击弹框查看订单详情
+            checkDetails(items){
+                this.dialogTableVisible = true;
+                this.moreDetails = items;
+            },
+            // 根据数据条数与每页多少条数据计算页数
+            pageCount (totalnum,limit){
+                return totalnum > 0 ? ((totalnum < limit) ? 1 : ((totalnum % limit) ? (parseInt(totalnum / limit) + 1) : (totalnum / limit))) : 0;
+            }
+        }
     }
 
 </script>
-
-
 <style scoped>
   @import "myorder.css";
-
 </style>
