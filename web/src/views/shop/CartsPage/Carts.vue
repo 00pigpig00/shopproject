@@ -1,6 +1,5 @@
 <template>
 <el-container>
-  <el-header>
     <el-menu
       :default-active="activeIndex2"
       class="el-menu-demo"
@@ -35,7 +34,7 @@
       <el-menu-item index="4" style="float: right"><a href="https://www.baidu.com" target="_blank">订单管理</a></el-menu-item>
     </el-menu>
 
-  </el-header>
+
   <el-main>
     <div class="main_heaad">
       <div style="margin-top: 15px;float: right">
@@ -65,12 +64,18 @@
           property="goodsName"
           label="商品"
           width="350">
-
+          <template slot-scope="scope">
+          <img :src="scope.row.image" style="width: 50px;height: 50px">
+            {{scope.row.goodsName}}
+          </template>
         </el-table-column>
         <el-table-column
           property="price"
           label="单价"
           show-overflow-tooltip>
+          <template slot-scope="scope">
+            ¥{{scope.row.price}}
+          </template>
         </el-table-column>
         <el-table-column
           property="number"
@@ -81,7 +86,7 @@
             {{scope.row.number}}
             <el-button size="mini" type="danger" @click="handleAdd(scope.row)">+</el-button>
           </template>
-          <!--<el-input-number v-model="num" :step="1" :min="1" :max="5" style="width: 100px"></el-input-number>-->
+
         </el-table-column>
 
         <el-table-column
@@ -99,9 +104,10 @@
   </el-main>
   <el-footer>
     <div class="fixde-bottom">
-      <div class="cart-checkbox">
-
-      </div>
+      <a href="#">
+        <el-buttom label="去结算" style="width:100px;height: 50px;background-color: red;float: right;line-height: 50px;text-align: center;color: #ffffff" >去结算</el-buttom>
+      </a>
+      <div style="float: right;line-height: 50px;padding-right: 80px">总价：&nbsp;&nbsp;¥{{calculate}}</div>
     </div>
 
   </el-footer>
@@ -112,12 +118,17 @@
 
 
 <script>
+import picture1 from '../../../common/images/phone1.jpg'
+import picture2 from '../../../common/images/phone2.jpg'
+import picture3 from '../../../common/images/phone3.jpg'
+import picture4 from '../../../common/images/num1.png'
 
     export default {
         name: 'mycarts',
         data() {
 
             return {
+              productList:[],
               totalMoney: 0,
               num: 1,
               activeIndex: '1',
@@ -126,23 +137,27 @@
               tableData:  [
                 {
                   goodsName: "iphone7",
-                  price: 5555,
-                  number: 1
+                  price: 2555,
+                  number: 1,
+                  image:picture1
                 },
                 {
-                  goodsName: "iphone7",
-                  price: 5555,
-                  number: 1
+                  goodsName: "iphone8",
+                  price: 4399,
+                  number: 1,
+                  image:picture2
                 },
                 {
-                  goodsName: "iphone7",
-                  price: 5555,
-                  number: 1
+                  goodsName: "iphone9",
+                  price: 5999,
+                  number: 1,
+                  image:picture3
                 },
                 {
-                  goodsName: "iphone7",
-                  price: 5555,
-                  number: 1
+                  goodsName: "iphone10",
+                  price: 7299,
+                  number: 1,
+                  image:picture4
                 }
               ],
               currentRow: null
