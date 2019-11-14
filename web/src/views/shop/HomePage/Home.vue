@@ -1,11 +1,26 @@
 <template>
     <div id="homepage">
         <!-- 轮播图 -->
-        <el-carousel :interval="3000" type="card" height="320px;background: #fff" :autoplay="false">
+        <el-carousel :interval="3000" type="card" height="320px;background: #fff" >
             <el-carousel-item v-for="(item,index) in lunbo" :key="index">
               <h3 class="medium"><img :src="item.img1" class="image"></h3>
             </el-carousel-item>
         </el-carousel>
+        <el-container>
+          <!-- 侧边栏的小下拉列表区 -->
+          <el-aside width="130px" class="aside_index">
+            <el-collapse v-model="activeNames" @change="handleChange">
+              <el-collapse-item  title="快捷帮助" name="0">
+                <div class="minidao">
+                  <el-button type="text">宽带专区</el-button>
+                  <el-button type="text">手机专区</el-button>
+                  <el-button type="text">靓号专区</el-button>
+                  <el-button type="text" icon="el-icon-phone">客服</el-button>
+                </div>
+              </el-collapse-item>
+            </el-collapse>
+
+      </el-aside>
         <!-- 商品列表 -->
           <el-main class="main_index">
             <!-- 宽带套餐 -->
@@ -15,10 +30,11 @@
                 </div>
                 <el-row>
                     <el-col class="ka" :span="8" v-for="(o, index) in kuandai" :key="index" :offset="2">
-                        <el-card :body-style="{ padding: '0px' }">
+                        <el-card class="xuanzhong" :body-style="{ padding: '0px' }">
                             <img :src="o.img2" class="image">
                             <div style="padding: 14px;">
-                            <span class="biaoti">{{o.title}}</span>
+                            <span class="biaoti">{{o.title}}</span><br>
+                              <span type="text" class="jiage">{{o.jiage}}</span>
                             <div class="bottom clearfix">
                                 <el-popover
                                 placement="top-start"
@@ -42,7 +58,7 @@
                 </div>
                 <el-row>
                     <el-col class="ka" :span="8" v-for="(o, index) in phoneimgs" :key="index" :offset="2">
-                        <el-card :body-style="{ padding: '0px' }">
+                        <el-card class="xuanzhong" :body-style="{ padding: '0px' }">
                             <img :src="o.img3" class="image">
                             <div style="padding: 14px;">
                             <span type="text" class="biaoti">{{o.title}}</span>
@@ -71,10 +87,11 @@
                 </div>
                 <el-row>
                     <el-col class="ka" :span="8" v-for="(o, index) in shangwang" :key="index" :offset="2">
-                        <el-card :body-style="{ padding: '0px' }">
+                        <el-card class="xuanzhong" :body-style="{ padding: '0px' }">
                             <img :src="o.img4" class="image">
                             <div style="padding: 14px;">
-                            <span class="biaoti">{{o.title}}</span>
+                            <span class="biaoti">{{o.title}}</span><br>
+                              <span type="text" class="jiage">{{o.jiage}}</span>
                             <div class="bottom clearfix">
                                 <el-popover
                                 placement="top-start"
@@ -92,17 +109,10 @@
                 </el-row>
             </div>
           </el-main>
-          <el-aside width="130px" class="aside_index">
-            <div>
-                <el-button type="text">宽带专区</el-button>
-                <el-button type="text">手机专区</el-button>
-                <el-button type="text">流量专区</el-button>
-                <el-button type="text" icon="el-icon-phone">客服</el-button>
-            </div>
-          </el-aside>
-         </div>
-           
-          
+        </el-container>
+    </div>
+
+
 </template>
 <!--这是一段没有用的话-->
 
@@ -189,11 +199,18 @@
                 },
               ],
 
+              activeNames: ['1'],
+
             }
 
         },
         mounted() {
+        },
+      methods:{
+        handleChange(val){
+          console.log(val);
         }
+      }
 
     }
 
