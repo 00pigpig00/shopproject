@@ -6,7 +6,7 @@
         <div class="imgBox">
           <div class="miniImgBox">
             <ul class="miniImg">
-              <li
+              <li>
                 <a href="javascript:"><img src="../../../assets/401_images/icon (6).jpg"></a>
               </li>
               <li>
