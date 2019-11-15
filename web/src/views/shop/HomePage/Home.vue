@@ -160,21 +160,21 @@
               ],
               phoneimgs:[
                 {
-                  img3:'shop_img/shouji1.jpg',
+                  img3:'shop_img/huawei.png',
                   title:'华为 Mate30 5G版',
                   neicun:'256GB',
                   jiage:'￥5499',
                   content:'突破视觉的边界，洞见影像的力量,探索性能的未来，释放能量的可能'
                 },
                 {
-                  img3:'shop_img/shouji3.jpg',
+                  img3:'shop_img/p30.jpg',
                   title:'华为 P30',
                   neicun:'128GB',
                   jiage:'￥4999',
                   content:'看的更远，看清更多，探索更近一步'
                 },
                 {
-                  img3:'shop_img/shouji5.jpg',
+                  img3:'shop_img/nex3.png',
                   title:'vivo NEX3 5G版',
                   neicun:'256GB',
                   jiage:'￥5698',
