@@ -21,15 +21,6 @@
               <li>
                 <a href="javascript:"><img src="shop_img/huawei4.png"></a>
               </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
-              </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
-              </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/shouji1.jpg"></a>
-              </li>
             </ul>
           </div>
           <a href="javascript:" class="stoleft"></a>
@@ -62,7 +53,8 @@
 
         </div>
         <div class="toCart">
-          <button type="button" id="addCart">加入购物车</button>
+          <a href="http://localhost:9527/#/mycarts">加入购物车
+          <button type="button" id="addCart">加入购物车</button></a>
         </div>
       </div>
 
