@@ -49,7 +49,10 @@
             // top: 'middle',
             bottom: 10,
             left: 'center',
-            data: [],},
+            data: ['2016','2017','2018','2019'],
+            left: '68%',
+            bottom:'92%'
+          },
 //          legend: {},
           tooltip: {},
           dataset: {
@@ -78,6 +81,7 @@
             {top: '55%'}
           ],
           series: [
+
             {type: 'bar'},
             {type: 'bar'},
             {type: 'bar'},
@@ -89,7 +93,7 @@
               selectedMode: 'single',
               data:[
 
-                {value:1548,name:'华为mate30 5G版'},
+                {value:548,name:'华为mate30 5G版'},
                 {value:535, name: '华为p30'},
                 {value:510, name: 'iphone11'},
                 {value:634, name: '小米9'},
@@ -110,8 +114,8 @@
               selectedMode: 'single',
               data:[
 
-                {value:1548,name:'50M'},
-                {value:535, name: '100M'},
+                {value:708,name:'100M'},
+                {value:535, name: '50M'},
                 {value:510, name: '1000M'}
               ],
               itemStyle: {
