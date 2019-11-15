@@ -170,11 +170,15 @@
                 this.form.city = area.city.value;
                 this.form.dist = area.area.value;
             },
-            //  确认新增收货地址 
+            //  确认新增收货地址
             confirm(){
                 if(this.modalType == '增加收货地址' ){
                     this.form.streetName = `${this.areas} ${this.form.streetName}`;
-                    this.myaddress.push(this.form);
+                    let arr = this.myaddress;
+                    arr.push(this.form);
+                    this.myaddress= [...arr];
+                    this.showMore()
+                    console.log('----',this.myaddress)
                 }else{
                     let index = this.myaddress.indexOf(this.tempForm);
                     this.myaddress.splice(index,1,this.form);

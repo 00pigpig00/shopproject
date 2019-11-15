@@ -1,55 +1,23 @@
 <template>
   <el-container>
-    <el-menu
-      :default-active="activeIndex2"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b">
+    <div id="cartspage">
 
-      <a href="http://localhost:9527/#/home"><i class="el-icon-office-building" style="float: left;line-height: 60px;color: white;font-size: 15px">商城首页</i></a>
-      <a href="https://map.baidu.com/@12612457.199112918,2625770.8383180765,11.15z"><i class="el-icon-location" style="float: left;line-height: 60px;color: white;font-size: 15px">广东</i></a>
-
-      <el-submenu index="1" style="float: right">
-        <template slot="title">处理中心</template>
-        <el-menu-item index="1-1">选项1</el-menu-item>
-        <el-menu-item index="1-2">选项2</el-menu-item>
-        <el-menu-item index="1-3">选项3</el-menu-item>
-      </el-submenu>
-      <el-submenu index="2" style="float: right">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <!--<el-submenu index="2-4">-->
-        <!--<template slot="title">选项4</template>-->
-        <!--<el-menu-item index="2-4-1">选项1</el-menu-item>-->
-        <!--<el-menu-item index="2-4-2">选项2</el-menu-item>-->
-        <!--<el-menu-item index="2-4-3">选项3</el-menu-item>-->
-        <!--</el-submenu>-->
-      </el-submenu>
-      <el-menu-item index="3" style="float: right">消息中心</el-menu-item>
-      <el-menu-item index="4" style="float: right"><a href="http://localhost:9527/#/order">订单管理</a></el-menu-item>
-    </el-menu>
-
-
-    <el-main>
       <div class="main_heaad">
-        <div style="margin-top: 15px;float: right">
-          <el-input  placeholder="请输入内容" v-model="input" class="input-with-select" style="width:230px;background-color: #fff">
-            <el-button slot="append" icon="el-icon-search"></el-button>
-          </el-input>
-        </div>
         <div class="logo">
-          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573537163652&di=bcb2797afd25bc7b3badce06ad77b426&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01bcc557fb4b2ea84a0e282b76272e.png" style="width: 200px;height: 135px">
           <a href="#none" class="text" style="color: #666666;font-size: 18px ;font-weight: bold;width: 100px;height: 40px">
-            购物车
+            我的购物车
           </a>
         </div>
+          <div style="margin-top: 15px;float: right">
+              <el-input  placeholder="请输入内容" v-model="input" class="input-with-select" style="width:230px;background-color: #fff">
+                <el-button slot="append" icon="el-icon-search"></el-button>
+              </el-input>
+          </div>
+
       </div>
-      <template>
+      <!--<div class="cancel-select">-->
+        <!--<el-button @click="toggleSelection()">取消选择</el-button>-->
+      <!--</div>-->
         <el-table
           ref="multipleTable"
           :data="tableData"
@@ -97,21 +65,13 @@
             </template>
           </el-table-column>
         </el-table>
-        <div style="margin-top: 20px">
-          <el-button @click="toggleSelection()">取消选择</el-button>
-        </div>
-      </template>
-    </el-main>
-    <el-footer>
+
       <div class="fixde-bottom">
-        <a href="#">
-          <el-button label="去结算" style="width:100px;height: 50px;background-color: red;float: right;line-height: 50px;text-align: center;color: #ffffff" >去结算</el-button>
-        </a>
-        <div style="float: right;line-height: 50px;padding-right: 80px">总价：&nbsp;&nbsp;¥{{calculate}}</div>
+        <div class="cancel-select"><el-button @click="toggleSelection()">取消选择</el-button></div>
+        <div class="allcount"><div style="padding-right: 40px">总价：&nbsp;&nbsp;¥{{calculate}}</div>
+          <el-button label="去结算" type="danger">去结算</el-button></div>
       </div>
-
-    </el-footer>
-
+    </div>
   </el-container>
      
 </template>
@@ -240,7 +200,12 @@
 </script>
 
 
-<style>
-  @import "Carts.css";
+<style lang="scss">
+  @import "Carts.scss";
 
+</style>
+<style scoped>
+  .el-container{
+    min-height:750px;
+  }
 </style>

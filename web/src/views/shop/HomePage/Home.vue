@@ -1,26 +1,26 @@
 <template>
     <div id="homepage">
         <!-- 轮播图 -->
-        <el-carousel :interval="3000" type="card" height="320px;background: #fff" >
+        <el-carousel :interval="3000"  height="320px;background: #fff" >
             <el-carousel-item v-for="(item,index) in lunbo" :key="index">
               <h3 class="medium"><img :src="item.img1" class="image"></h3>
             </el-carousel-item>
         </el-carousel>
         <el-container>
           <!-- 侧边栏的小下拉列表区 -->
-          <el-aside width="130px" class="aside_index">
-            <el-collapse v-model="activeNames" @change="handleChange">
-              <el-collapse-item  title="快捷帮助" name="0">
-                <div class="minidao">
-                  <el-button type="text">宽带专区</el-button>
-                  <el-button type="text">手机专区</el-button>
-                  <el-button type="text">靓号专区</el-button>
-                  <el-button type="text" icon="el-icon-phone">客服</el-button>
-                </div>
-              </el-collapse-item>
-            </el-collapse>
+          <!--<el-aside width="130px" class="aside_index">-->
+            <!--<el-collapse v-model="activeNames" @change="handleChange">-->
+              <!--<el-collapse-item  title="快捷帮助" name="0">-->
+                <!--<div class="minidao">-->
+                  <!--<el-button type="text">宽带专区</el-button>-->
+                  <!--<el-button type="text">手机专区</el-button>-->
+                  <!--<el-button type="text">靓号专区</el-button>-->
+                  <!--<el-button type="text" icon="el-icon-phone">客服</el-button>-->
+                <!--</div>-->
+              <!--</el-collapse-item>-->
+            <!--</el-collapse>-->
 
-      </el-aside>
+      <!--</el-aside>-->
         <!-- 商品列表 -->
           <el-main class="main_index">
             <!-- 宽带套餐 -->

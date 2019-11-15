@@ -157,4 +157,13 @@
     .el-col-offset-2{
         margin-top: 30px;
     }
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  /* // 滚动条的滑块 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #a1a3a9;
+    border-radius: 0px;
+  }
 }
