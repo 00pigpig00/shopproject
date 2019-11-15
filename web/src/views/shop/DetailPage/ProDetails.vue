@@ -2,12 +2,24 @@
   <div class="container">
     <div class="productInfo">
       <div class="productImg">
-        <div class="bigImg"><img src="shop_img/icon (6).jpg"></div>
+        <div class="bigImg"><img src="shop_img/huawei.png"></div>
         <div class="imgBox">
           <div class="miniImgBox">
             <ul class="miniImg">
               <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/huawei.png"></a>
+              </li>
+              <li>
+                <a href="javascript:"><img src="shop_img/huawei1.png"></a>
+              </li>
+              <li>
+                <a href="javascript:"><img src="shop_img/huawei2.png"></a>
+              </li>
+              <li>
+                <a href="javascript:"><img src="shop_img/huawei3.png"></a>
+              </li>
+              <li>
+                <a href="javascript:"><img src="shop_img/huawei4.png"></a>
               </li>
               <li>
                 <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
@@ -16,19 +28,7 @@
                 <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
               </li>
               <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
-              </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
-              </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
-              </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
-              </li>
-              <li>
-                <a href="javascript:"><img src="shop_img/icon (6).jpg"></a>
+                <a href="javascript:"><img src="shop_img/shouji1.jpg"></a>
               </li>
             </ul>
           </div>
@@ -37,8 +37,8 @@
         </div>
       </div>
       <div class="productContent">
-        <div class="d-name">iPhone11 pro</div>
-        <div class="prices"><span class="n-price">￥5999.00</span><span class="o-price">￥5999.99</span></div>
+        <div class="d-name">HUAWEI MATE30</div>
+        <div class="prices"><span class="n-price">￥6899.00</span><span class="o-price">￥6899.99</span></div>
         <div class="starScore">
 							<span class="star">
 								<img src="shop_img/bon-star.png">
@@ -209,6 +209,8 @@
   .bigImg img {
     max-height: 500px;
     max-width: 100%;
+    width: 500px;
+    height: 500px;
     position: absolute;
     left: 50%;
     top: 50%;
