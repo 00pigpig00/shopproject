@@ -9,8 +9,8 @@
       text-color="#fff"
       active-text-color="#ffd04b">
 
-      <i class="el-icon-office-building" style="float: left;line-height: 60px;color: white;font-size: 15px">商城首页</i>
-      <i class="el-icon-location" style="float: left;line-height: 60px;color: white;font-size: 15px">广东</i>
+      <a href="http://localhost:9527/#/home"><i class="el-icon-office-building" style="float: left;line-height: 60px;color: white;font-size: 15px">商城首页</i></a>
+      <a href="https://map.baidu.com/@12612457.199112918,2625770.8383180765,11.15z"><i class="el-icon-location" style="float: left;line-height: 60px;color: white;font-size: 15px">广东</i></a>
 
       <el-submenu index="1" style="float: right">
         <template slot="title">处理中心</template>
@@ -31,7 +31,7 @@
         <!--</el-submenu>-->
       </el-submenu>
       <el-menu-item index="3" style="float: right">消息中心</el-menu-item>
-      <el-menu-item index="4" style="float: right"><a href="https://www.baidu.com" target="_blank">订单管理</a></el-menu-item>
+      <el-menu-item index="4" style="float: right"><a href="http://localhost:9527/#/order">订单管理</a></el-menu-item>
     </el-menu>
 
 
