@@ -31,15 +31,14 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-    @import './order.css';
-</style>
-<style>
-  .el-tabs__content{
-    /*border: 1px solid #1890ff;*/
-    /*border-top: none;*/
-    /*border-bottom: none;*/
-    margin-top:20px;
-  }
+<style lang="scss">
+#order{
+    height:100%;
+    min-width: 1360px;
+    max-width: 1360px;
+    margin: 0 auto;
+    .el-tabs__content{
+        margin-top:20px;
+    }
+}
 </style>
