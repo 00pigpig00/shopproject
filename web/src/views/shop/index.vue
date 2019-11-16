@@ -9,7 +9,7 @@
             <el-menu-item index="1"><router-link to="/home">首页</router-link></el-menu-item>
             <el-menu-item index="2"><router-link to="/charts">数据图表</router-link></el-menu-item>
             <el-menu-item index="3">
-                <el-dropdown hide-timeout="500" placement="bottom-start">
+                <el-dropdown placement="bottom-start">
                     <span class="el-dropdown-link">
                         我的<i class="el-icon-arrow-down el-icon--right"></i>
                     </span>

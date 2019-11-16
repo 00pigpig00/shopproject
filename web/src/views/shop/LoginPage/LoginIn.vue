@@ -25,7 +25,7 @@
                 <!--<el-input v-model.check="ruleForm.check"></el-input>-->
                 <!--</el-form-item>-->
                 <el-form-item>
-                  <el-button type="primary" @click="submitForm('ruleForm1')">提交</el-button>
+                  <el-button type="primary" @click="submitForm('ruleForm1')">登录</el-button>
                   <el-button @click="resetForm('ruleForm1')">重置</el-button>
                 </el-form-item>
               </el-form>
@@ -48,7 +48,7 @@
                   <el-input v-model.email="ruleForm.email"></el-input>
                 </el-form-item>
                 <el-form-item>
-                  <el-button type="primary" @click="register('ruleForm')">提交</el-button>
+                  <el-button type="primary" @click="register('ruleForm')"  v-loading.fullscreen.lock="fullscreenLoading" element-loading-spinner="el-icon-loading" element-loading-background="rgba(0, 0, 0, 0.6)">注册</el-button>
                   <el-button @click="resetForm('ruleForm')">重置</el-button>
                 </el-form-item>
               </el-form>
@@ -133,6 +133,7 @@
           email:'',
           check:''
         },
+        fullscreenLoading: false,
 //        rules1: {
 //          userName1: [
 //            { validator: validateName, trigger: 'blur' }
@@ -181,10 +182,13 @@
         });
       },
       submitForm(formName) {
+          this.fullscreenLoading = true;
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('登录成功!');
-            this.$router.push('./home');
+            setTimeout(() => {
+                this.fullscreenLoading = false;
+                 this.$router.push('./home');
+            }, 1000);
           }
 //          else if (valid == ''){
 //            alert('请输入账号或密码!');
