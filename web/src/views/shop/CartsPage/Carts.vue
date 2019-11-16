@@ -69,7 +69,7 @@
       <div class="fixde-bottom">
         <div class="cancel-select"><el-button @click="toggleSelection()">取消选择</el-button></div>
         <div class="allcount"><div style="padding-right: 40px">总价：&nbsp;&nbsp;¥{{calculate}}</div>
-          <el-button label="去结算" type="danger">去结算</el-button></div>
+          <el-button label="去结算" type="danger" @click="goCount">去结算</el-button></div>
       </div>
     </div>
   </el-container>
@@ -193,7 +193,11 @@
             message: '已取消删除'
           });
         });
+      },
+      goCount(){
+          this.$router.push('/order')
       }
+
     }
   };
 
