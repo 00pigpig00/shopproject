@@ -1,7 +1,7 @@
 <template>
     <div id="homepage">
         <!-- 轮播图 -->
-        <el-carousel :interval="3000"  height="320px;background: #fff" >
+        <el-carousel :interval="2000"  height="320px;background: #fff" >
             <el-carousel-item v-for="(item,index) in lunbo" :key="index">
               <h3 class="medium"><img :src="item.img1" class="image"></h3>
             </el-carousel-item>

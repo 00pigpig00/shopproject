@@ -40,9 +40,6 @@
         color: #333;
         text-align: center;
     }
-    .xuanzhong:hover{
-        border: 1px solid red;
-    }
     /*侧边栏样式*/
     .aside_index {
         background: #f5f5f5;
@@ -166,4 +163,28 @@
     background-color: #a1a3a9;
     border-radius: 0px;
   }
+  .el-card__body{
+      cursor: pointer;
+  }
+  .xuanzhong:hover{
+    -webkit-animation:tada 1s .2s ease both;
+    -moz-animation:tada 1s .2s ease both;
+  }
+  #animation{
+    -webkit-animation:tada 1s .2s ease both;
+    -moz-animation:tada 1s .2s ease both;}
+    @-webkit-keyframes tada{
+        0%{-webkit-transform:scale(1)}
+        10%,20%{-webkit-transform:scale(0.9) rotate(-3deg)}
+        30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg)}
+        40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg)}
+        100%{-webkit-transform:scale(1) rotate(0)}
+    }
+    @-moz-keyframes tada{
+        0%{-moz-transform:scale(1)}
+        10%,20%{-moz-transform:scale(0.9) rotate(-3deg)}
+        30%,50%,70%,90%{-moz-transform:scale(1.1) rotate(3deg)}
+        40%,60%,80%{-moz-transform:scale(1.1) rotate(-3deg)}
+        100%{-moz-transform:scale(1) rotate(0)}
+    }
 }
