@@ -88,26 +88,26 @@
             input: '',
             tableData:  [
                 {
-                    goodsName: "iphone7",
-                    price: 2555,
+                    goodsName: "vivo NEX3 5G",
+                    price: 5698,
                     number: 1,
                     image:picture1
                 },
                 {
-                    goodsName: "iphone8",
-                    price: 4399,
+                    goodsName: "华为 Mate30 5G",
+                    price: 5499,
                     number: 1,
                     image:picture2
                 },
                 {
-                    goodsName: "iphone9",
-                    price: 5999,
+                    goodsName: "华为p30",
+                    price: 4999,
                     number: 1,
                     image:picture3
                 },
                 {
-                    goodsName: "iphone10",
-                    price: 7299,
+                    goodsName: "吉祥靓号",
+                    price: 10,
                     number: 1,
                     image:picture4
                 }
