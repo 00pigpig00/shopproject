@@ -166,7 +166,9 @@
     },
     methods: {
       handleClick(tab, event) {
-        console.log(tab, event);
+//        console.log(tab, event);
+        this.resetForm("ruleForm");
+        this.resetForm("ruleForm1");
       },
       register(formName){
         this.$refs[formName].validate((valid) => {
