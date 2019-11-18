@@ -109,7 +109,7 @@
     background: #fff;
   }
   .footer-wrap{
-    max-width:1360px;
+    max-width:1280px;
     height:100%;
     margin:0 auto;
     display: flex;
