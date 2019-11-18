@@ -15,7 +15,7 @@
             </div>
             <el-table
                 ref="multipleTable"
-                :data="tableData"
+                :data="filterData"
                 tooltip-effect="dark"
                 style="width: 100%"
                 @selection-change="handleSelectionChange">
@@ -120,7 +120,16 @@
                 }
             }
             return sum;
+        },
+      filterData(){
+
+        const {input,tableData}=this;
+        let arr=[...tableData];
+        if(input){
+          arr=tableData.filter(n=>n.goodsName.toUpperCase().includes(input.toUpperCase()))
         }
+        return arr;
+      }
     },
     methods: {
         handleSelect(key, keyPath) {

@@ -2,7 +2,7 @@
   <div id="order">
     <el-tabs :tab-position="tabPosition" type="border-card" style="height: 600px;margin-top: 15px;">
       <el-tab-pane>
-        <span slot="label"><i class="el-icon-star-off"></i> 个人中心</span>
+        <span slot="label"><i class="el-icon-star-off"></i> 我的个人中心</span>
         <mycenter></mycenter>
       </el-tab-pane>
       <el-tab-pane>
