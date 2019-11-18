@@ -16,6 +16,7 @@
             <el-table
                 ref="multipleTable"
                 :data="filterData"
+                align="center"
                 tooltip-effect="dark"
                 style="width: 100%"
                 @selection-change="handleSelectionChange">
@@ -25,8 +26,9 @@
                 </el-table-column>
                 <el-table-column
                     property="goodsName"
+                    align="left"
                     label="商品"
-                    width="350">
+                    width="450">
                     <template slot-scope="scope">
                     <img :src="scope.row.image" style="width: 50px;height: 50px">
                     {{scope.row.goodsName}}
@@ -34,7 +36,9 @@
                 </el-table-column>
                 <el-table-column
                     property="price"
+                    align="right"
                     label="单价"
+                    width="250"
                     show-overflow-tooltip>
                     <template slot-scope="scope">
                     ¥{{scope.row.price}}
@@ -43,7 +47,8 @@
                 <el-table-column
                     property="number"
                     label="数量"
-                    width="220">
+                    align="center"
+                    width="380">
                     <template slot-scope="scope">
                     <el-button size="mini"  @click="handleSubtract(scope.$index, scope.row)">-</el-button>
                     {{scope.row.number}}

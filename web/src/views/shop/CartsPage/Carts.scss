@@ -49,4 +49,10 @@
     display: flex;
     align-items: center;
   }
+  .el-table .cell{
+    padding-left:0 !important;
+  }
+  .el-table-column--selection .cell{
+    padding-left:10px !important;
+  }
 }
