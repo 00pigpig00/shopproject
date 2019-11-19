@@ -44,7 +44,7 @@ for (let i = 0; i < 6; i++) {
 userinfoList.push({ 'userid': 'lixiaoshuang', 'username': 'saturn', 'userphone': '137212312312', 'userimg': 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png' })
 
 List.push(['product', '2016', '2017', '2018', '2019'])
-List.push(['手机卡', Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)')]),
+List.push(['手机卡', Mock.mock('@float(100, 200, 3, 1)'), Mock.mock('@float(50, 200, 3, 1)'), Mock.mock('@float(100, 200, 3, 1)'), Mock.mock('@float(0, 30, 3, 1)')]),
 List.push(['宽带', Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)')]),
 List.push(['手机', Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)')])
 // console.log(List)

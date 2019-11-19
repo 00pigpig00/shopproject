@@ -32,6 +32,18 @@ const shopRouter = {
       meta: { title: '图表', icon: 'dashboard', affix: true }
     },
     {
+      path: '/chartsplace',
+      component: () => import('@/views/shop/ChartsPage/ChartsPlace'),
+      name: 'chartsplace',
+      meta: { title: '图表位置', icon: 'dashboard', affix: true }
+    },
+    {
+      path: '/chartsage',
+      component: () => import('@/views/shop/ChartsPage/ChartsAge'),
+      name: 'chartsage',
+      meta: { title: '图表年龄', icon: 'dashboard', affix: true }
+    },
+    {
       path: '/prodetails',
       component: () => import('@/views/shop/DetailPage/ProDetails'),
       name: 'prodetails',
