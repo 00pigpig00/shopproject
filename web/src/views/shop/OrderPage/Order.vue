@@ -34,8 +34,8 @@ export default {
 <style lang="scss">
 #order{
     height:100%;
-    min-width: 1360px;
-    max-width: 1360px;
+    min-width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     .el-tabs__content{
         margin-top:20px;
