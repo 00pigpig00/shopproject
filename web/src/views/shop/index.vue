@@ -7,7 +7,19 @@
         </h1>
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#333" text-color="#dcdcdc" active-text-color="#fff">
             <el-menu-item index="1"><router-link to="/home">首页</router-link></el-menu-item>
-            <el-menu-item index="2"><router-link to="/charts">数据图表</router-link></el-menu-item>
+            <!--<el-menu-item index="2"><router-link to="/charts">数据图表</router-link></el-menu-item>-->
+          <el-menu-item index="2">
+            <el-dropdown placement="bottom-start">
+                    <span class="el-dropdown-link">
+                        数据图表<i class="el-icon-arrow-down el-icon--right"></i>
+                    </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item><router-link to="/charts">销售统计</router-link></el-dropdown-item>
+                <el-dropdown-item><router-link to="/chartsplace">地区统计</router-link></el-dropdown-item>
+                <el-dropdown-item><router-link to="/chartsage">年龄统计</router-link></el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </el-menu-item>
             <el-menu-item index="3">
                 <el-dropdown placement="bottom-start">
                     <span class="el-dropdown-link">

@@ -44,9 +44,9 @@ for (let i = 0; i < 6; i++) {
 userinfoList.push({ 'userid': 'lixiaoshuang', 'username': 'saturn', 'userphone': '137212312312', 'userimg': 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png' })
 
 List.push(['product', '2016', '2017', '2018', '2019'])
-List.push(['手机卡', Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)')]),
-List.push(['宽带', Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)')]),
-List.push(['手机', Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)'), Mock.mock('@float(0, 200, 3, 1)')])
+List.push(['手机卡', Mock.mock('@float(1300, 1450, 3, 1)'), Mock.mock('@float(1400, 1550, 3, 1)'), Mock.mock('@float(1600, 1700, 3, 1)'), Mock.mock('@float(1600, 1750, 3, 1)')]),
+List.push(['宽带', Mock.mock('@float(60, 75, 3, 1)'), Mock.mock('@float(70, 85, 3, 1)'), Mock.mock('@float(80, 95, 3, 1)'), Mock.mock('@float(90, 105, 3, 1)')]),
+List.push(['手机', Mock.mock('@float(70, 85, 3, 1)'), Mock.mock('@float(80, 95, 3, 1)'), Mock.mock('@float(90, 105, 3, 1)'), Mock.mock('@float(100, 115, 3, 1)')])
 // console.log(List)
 
 export default [

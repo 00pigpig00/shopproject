@@ -43,10 +43,15 @@
   .el-button--medium{
     display: flex;
     height:30px !important;
-    margin-right:20px;
   }
   .allcount{
     display: flex;
     align-items: center;
+  }
+  .el-table .cell{
+    padding-left:0 !important;
+  }
+  .el-table-column--selection .cell{
+    padding-left:10px !important;
   }
 }
