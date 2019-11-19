@@ -56,7 +56,7 @@
               name: '访问来源',
               type: 'pie',
               radius : '35%',
-              center: ['40%', '50%'],
+              center: ['50%', '60%'],
               data:[
                 {value:332139, name:'1960前'},
                 {value:75323, name:'1960-1970'},
@@ -103,7 +103,7 @@
               name: '访问来源',
               type: 'pie',
               radius : '35%',
-              center: ['40%', '50%'],
+              center: ['50%', '60%'],
               data:[
                 {value:2737, name:'1960前'},
                 {value:7873, name:'1960-1970'},
@@ -150,7 +150,7 @@
               name: '访问来源',
               type: 'pie',
               radius : '35%',
-              center: ['40%', '50%'],
+              center: ['50%', '60%'],
               data:[
                 {value:776, name:'1960前'},
                 {value:3462, name:'1960-1970'},
