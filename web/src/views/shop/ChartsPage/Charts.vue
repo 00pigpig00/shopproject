@@ -34,6 +34,7 @@
         this.init();
 //            this.total=res.data.items.length;
       })
+
     },
     methods: {
       init() {
@@ -65,7 +66,10 @@
 //            {type: 'category', gridIndex: 0},
 //            {type: 'category', gridIndex: 1}
 //          ],
-          yAxis: {},
+          yAxis: {
+            type: 'value',
+            name: '单位(万)'
+          },
 //            [{
 //            gridIndex: 0,
 //            axisLabel: {
@@ -92,12 +96,12 @@
               center: ['23%', '70%'],
               selectedMode: 'single',
               data:[
+                {value:1548,name:'腾讯大王卡'},
+                {value:535, name: '冰激凌卡'},
+                {value:510, name: '学霸卡'},
+                {value:634, name: '吉祥号'},
+                {value:735, name: '爱情号'}
 
-                {value:548,name:'华为mate30 5G版'},
-                {value:535, name: '华为p30'},
-                {value:510, name: 'iphone11'},
-                {value:634, name: '小米9'},
-                {value:735, name: 'oppo reno'}
               ],
               itemStyle: {
                 emphasis: {
@@ -133,11 +137,12 @@
               selectedMode: 'single',
               data:[
 
-                {value:1548,name:'腾讯大王卡'},
-                {value:535, name: '冰激凌卡'},
-                {value:510, name: '学霸卡'},
-                {value:634, name: '吉祥号'},
-                {value:735, name: '爱情号'}
+
+                {value:548,name:'华为mate30 5G版'},
+                {value:535, name: '华为p30'},
+                {value:510, name: 'iphone11'},
+                {value:634, name: '小米9'},
+                {value:735, name: 'oppo reno'}
               ],
               itemStyle: {
                 emphasis: {
