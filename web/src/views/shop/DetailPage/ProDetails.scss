@@ -1,4 +1,6 @@
 #prodetails{
+    max-width:1280px;
+    min-width: 1280px;
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -10,6 +12,7 @@
         margin-top: 50px;
     }
     .productImg {
+        width: 500px;
         align-self: flex-start;
     }
     .imgBox {
@@ -68,20 +71,20 @@
         background-position: center;
     }
     .bigImg {
-        width: 500px;
-        height: 500px;
+        width: 480px;
+        height: 480px;
         position: relative;
         border: 1px solid #E6E6E6;
     }
     .bigImg img {
         max-height: 500px;
         max-width: 100%;
-        width: 500px;
-        height: 500px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        width: 480px;
+        height: 480px;
+        // position: absolute;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
     }
     .productContent {
         align-self: flex-start;

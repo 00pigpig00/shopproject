@@ -3,7 +3,7 @@
     <div class="productInfo">
       <div class="productImg">
         <div class="bigImg">
-            <div class="item-pic magnifier-box" style="height:480px;">
+            <div class="item-pic magnifier-box" style="height:480px;width:480px;">
                 <pic-zoom :url="bigUrl" :scale="2"></pic-zoom>
             </div>
             <!-- <img src="shop_img/huawei.png"> -->
